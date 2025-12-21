@@ -1,13 +1,13 @@
-var map = L.map('map').setView([51.505, -0.09], 10);
+var map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const stallIcon = L.icon({
- //   iconUrl: 'stall-icon.png',
-    iconSize: [32, 37],
-    iconAnchor: [16, 37],
+const santaIcon = L.icon({
+    iconUrl: 'santaicon.png',
+    iconSize: [50, 50],
+    iconAnchor: [20, 40],
     popupAnchor: [0, -37]
 });
 
@@ -88,7 +88,9 @@ const marketLocations = [
 // Iterate through each market in your list
 marketLocations.forEach(function(market) {
     
-    var marker = L.marker([market.lat, market.lng]).addTo(map);
+    var marker = L.marker([market.lat, market.lng],{
+        icon: santaIcon
+    }).addTo(map);
 
     var popupContent = `
         <div style="text-align: center;">
