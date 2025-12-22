@@ -1,8 +1,23 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+var aerialLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-GP, and the GIS User Community'
+});
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+});
+
+var map = L.map('map', {
+    center: [51.505, -0.09],
+    zoom: 13,
+    layers: [osmLayer] 
+});
+
+var baseMaps = {
+    "Standard Map": osmLayer,
+    "Aerial Imagery": aerialLayer
+};
+
+L.control.layers(baseMaps).addTo(map);
 
 const santaIcon = L.icon({
     iconUrl: 'santaicon.png',
