@@ -1,15 +1,17 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background: #fafafa;
     color: white;
 }
 
 nav {
     background: #336600 ;
-    padding: 20px 30px;
+    padding: 10px 10px;
     display: flex;
     gap: 50px;
+    justify-content: left;
+    width: 100%;
 }
 
 nav a {
@@ -23,6 +25,15 @@ nav a:hover {
     color: #fff;
 }
 
+.logo {
+  width: 40px;    
+  height: 30px; 
+  padding: 2px;
+  border-radius: 60%;
+  display: inline-block;
+  
+}
+
 
 #map {
     height: 70vh;
@@ -30,28 +41,28 @@ nav a:hover {
     border-top: 2px solid #ddd;
 }
 
+#map-text {
+  position: absolute;
+  top: 70px;      
+  right: 20px;
+  z-index: 1000;  
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #cc3300
+  
+
+  
+  
+}
+
 .content {
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
-header {
-   
-  color: white
-;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 10;
-  width: 100%;
-  z-index: 1000;
-  display: inline-block;
-  background-color: #b30000;
-  border-radius: 2px;
 
-}
 
 header {
   
@@ -60,7 +71,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  
   top: 5;
   width: 100%;
   z-index: 1000;
@@ -91,7 +102,7 @@ header nav {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   overflow: hidden;
-  background-color: blue;
+  background-color: #ff9999;
 }
 .market-header {
     background-color: #d42426; /* Festive Red */
