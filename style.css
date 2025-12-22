@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -84,6 +82,52 @@ header nav {
   font-weight: 600;
 }
 
+/*Market Container Styles*/
+
+.market-container {
+  max-width: 1000px;
+  margin: 10px auto 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: blue;
+}
+.market-header {
+    background-color: #d42426; /* Festive Red */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+tr:hover {
+    background-color: #30b121;
+}
+.status-closed {
+    color: #d9534f;
+    font-weight: bold;
+}
+.note {
+    font-size: 0.85em;
+    color: #171717;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Footer Styles */
 footer {
   background: #336600;
   color: #ccc;
