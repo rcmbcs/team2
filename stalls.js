@@ -106,7 +106,7 @@ const marketLocations = [
     lat: 51.4821,
     lng: -0.1440,
     address: "Brixton Market, London SW2 1AA",
-    images: ""
+    images: "assets/images/battersea.jpg"
   }
 ];
 
