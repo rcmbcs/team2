@@ -44,7 +44,7 @@ nav a:hover {
 
 #map-text {
   position: absolute;
-  top: 70px;      
+  bottom: 30px;      
   right: 20px;
   z-index: 1000;  
   background: rgba(255, 255, 255, 0.8);
