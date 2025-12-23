@@ -105,12 +105,42 @@ const marketLocations = [
     name: "Battersea Power Station Market",
     lat: 51.4821,
     lng: -0.1440,
-    address: "Brixton Market, London SW2 1AA",
+    address: "Battersea Power Station, London SW11 8BZ",
     images: "assets/images/battersea.jpg"
   }
 ];
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all table rows
+    let marketRows = document.querySelectorAll('tr'); 
+
+    // Loop through them (skipping the header row if necessary)
+    marketRows.forEach(row => {
+        row.addEventListener('click', function() {
+            let marketId = this.id;
+            // 1. Retrieve the specific marker from our lookup object
+            let selectedMarker = markers[marketId];
+            if (selectedMarker) {
+                // 2. Move the map smoothly to the marker
+                // 'flyTo' is better than 'setView' for orientation
+                map.flyTo(selectedMarker.getLatLng(), 16, {
+                    duration: 1.5
+                });
+                // 3. Open the popup (This is the "Focus")
+                selectedMarker.openPopup();
+                // 4. Scroll the page up to the map so the user sees it
+                document.getElementById('map').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center' 
+                });
+            }
+        });
+    });
+});
+
 // Iterate through each market in your list
+const markers = {};
+
 marketLocations.forEach(function(market) {
     
     var marker = L.marker([market.lat, market.lng],{
@@ -126,4 +156,6 @@ marketLocations.forEach(function(market) {
     `;
 
     marker.bindPopup(popupContent);
+
+    markers[market.id] = marker;
 });
