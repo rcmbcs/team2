@@ -150,7 +150,7 @@ marketLocations.forEach(function(market) {
     var popupContent = `
         <div style="text-align: center;">
             <h3 style="margin: 0 0 5px 0;">${market.name}</h3>
-            <img src="${market.images}" alt="${market.name}" style="width: 100%; height: auto; max-width: 200px; margin-bottom: 5px;"/>
+            <img src="${market.images}" alt="${market.name}" style="width: 100%; height: auto; max-width: 300px; margin-bottom: 5px;"/>
             <p style="margin: 0; font-size: 0.9em;">${market.address}</p>
         </div>
     `;
