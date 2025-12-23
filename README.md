@@ -18,7 +18,7 @@ https://rcmbcs.github.io/team2/
 ## Two Sleigh Contributors:
 Team2
 
-https://github.com/kcvic
+Victor[https://github.com/kcvic]
 
-https://github.com/rcmbcs
+Rosalie[https://github.com/rcmbcs]
 
