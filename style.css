@@ -1,18 +1,69 @@
 body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background: #fafafa;
-    color: white;
-    background-image: url(assets/images/background.jpg);
+        margin: 0;
+        top: 5px;
+        
+        color:#cc3300;
+        font-family: "Mountains of Christmas", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+               
 }
 
+
+
+#titleBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02422b;
+    position: relative;
+}   
+
+#title {
+    position: absolute;
+    top: 30px;
+    
+    z-index: 5;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+}
+
+#layout {
+    display: flex;
+    height: 100vh; /* full screen layout */
+    font-family: serif;
+    font-size: 0.8rem;
+    position: relative; 
+}
+
+#market-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 100vh; /* full height sidebar */
+    background: rgba(255, 255, 255, 0.95);
+    border-right: 1px solid #ccc;
+    z-index: 1000; /* ensure it sits above the map */
+    overflow-y: auto;
+
+}
+
+
+
+
 nav {
-    background: #336600 ;
+    background: #336600;
     padding: 10px 10px;
     display: flex;
     gap: 50px;
-    justify-content: left;
+    justify-content: center;
     width: 100%;
+     
 }
 
 nav a {
@@ -26,20 +77,17 @@ nav a:hover {
     color: #fff;
 }
 
-.logo {
-  width: 40px;    
-  height: 30px; 
-  padding: 2px;
-  border-radius: 60%;
-  display: inline-block;
-  
-}
+
 
 
 #map {
-    height: 70vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
     border-top: 2px solid #ddd;
+    
+
 }
 
 #map-text {
@@ -50,7 +98,7 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.8);
   padding: 8px 12px;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 0.25rem;
   color: #cc3300
   
 
@@ -63,53 +111,42 @@ nav a:hover {
     max-width: 800px;
     margin: auto;
 }
-
-
-header {
-  
-  color: #cc3300
-;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  top: 5;
-  width: 100%;
-  z-index: 1000;
-  background: linear-gradient(
-        135deg,
-        rgba(179, 0, 0, 0.8),
-        rgba(77, 0, 0, 0.5)
-    );
-    color: white;
-    padding: 7px;
-   font-family: Garamond, serif; 
-
-}
-
-header nav {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 /*Market Container Styles*/
 
+#tableFont {
+    font-size: 5px;
+}
 .market-container {
-  max-width: 1000px;
+  width: 500px;
+
   margin: 10px auto 5px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   overflow: hidden;
-  background-color: #ff9999;
+  overflow-y: auto;
+  background-color: #ffe6e6;
+  
 }
+
+.leaflet-container {
+  cursor: url('assets/images/sleigh.png') 25 25, auto;
+}
+
+.marker-glow {
+  filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px orange);
+  transition: filter 0.2s ease-in-out;
+}
+
 .market-header {
     background-color: #d42426; /* Festive Red */
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 5px;
+    display: flex;
+    justify-content: center;   /* horizontal centering */
+    align-items: center;       /* vertical centering */
+    font-size: 1rem;
+    height: 50px;
 }
 table {
     width: 100%;
@@ -126,14 +163,14 @@ th {
     color: #333;
 }
 tr:hover {
-    background-color: #30b121;
+    background-color:  #336600;
 }
 .status-closed {
     color: #d9534f;
     font-weight: bold;
 }
 .note {
-    font-size: 0.85em;
+    font-size: 0.25rem;
     color: #171717;
     margin-top: 4px;
     display: block;

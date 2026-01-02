@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon Map Project</title>
+    <title>improved Map Project</title>
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="titleBackground">
+        <img src="assets/images/blankHeader.png" alt="greenHeader">
 
-    <nav>
+        <h1 id="title">
+Festive Crawl
+        </h1>
         
-    </nav>
-
-    <header>
-        <h1>🎄Festive Crawl 🎄</h1>
-    </header>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <div id="map">
-        <p id="map-text">Ho ho ho! <br>
-            Give santa a tap to unwrap festive London magic.</p>
-        <div id="map"></div>
-
     </div>
-    <div id="market-list" class="market-container">
-        <div class="market-header">
-            <h2>London Christmas Markets (2025/2026 Season)</h2>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Market Name</th>
-                    <th>Dates & Months</th>
-                    <th>Opening Times</th>
-                </tr>
-            </thead>
+    
+    <div id="layout">
+        
+      <div id="map">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></div>   
+        <div id="market-list" class="market-container">
+            <div class="market-header">
+                <h2>London Christmas Markets (2025/2026 Season)</h2>
+            </div>
+            <table id="tablefont">
+                <thead>
+                    <tr>
+                        <th>Market Name</th>
+                        <th>Dates & Months</th>
+                        <th>Opening Times</th>
+                    </tr>
+                </thead>
             <tbody>
                 <tr id="1">
                     <td><strong>1. Southbank Centre Winter Market</strong></td>
@@ -90,8 +90,10 @@
                     <td>Mon–Fri: 11:00 – 22:00<br>Sat–Sun: 10:00 – 22:00</td>
                 </tr>
             </tbody>
-        </table>
-</div>
+            </table>
+        </div>
+    </div>
+    
 <footer>
   <p>© 2025 Hackathon Project by TwoSleigh</p>
   
